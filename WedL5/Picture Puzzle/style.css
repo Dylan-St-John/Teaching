@@ -1,0 +1,40 @@
+body{
+    text-align: center !important;
+}
+
+#final{
+    width: 30rem;
+    height: 48rem;
+}
+
+.picture{
+    /* the all of the puzzle pieces and the drop zone should
+    have the same width and height as the final */
+    width: 30rem;
+    height: 48rem;
+}
+
+/* #piece {
+    width: 30rem;
+    height: 48rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+}
+
+#piece2 {
+    width: 30rem;
+    height: 48rem;
+    margin-left: -20rem;
+    margin-top: 0rem;
+} */
+
+.imgContainer{
+    width:10rem;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.imgContainer > img{
+    width: 30rem;
+    height: 48rem;
+}

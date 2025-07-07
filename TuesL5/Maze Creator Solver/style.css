@@ -1,0 +1,6 @@
+/* give your canvas some basic styling like a border and a background */
+canvas {
+    border-style: solid;
+    border-color: brown; 
+    background-color: black;
+}

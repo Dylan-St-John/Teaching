@@ -1,0 +1,12 @@
+1) Select an element from your page and hide it when you hover
+over it
+
+2) When you click on an element, change the inner HTML of that element
+to say something new
+
+3) When you click a button (element), change the background 
+of the webpage
+
+4) Add elements to the page using jQuery. For example, if you were to 
+make a quiz, add the new questions to the bottom of the page after
+the user selects an answer.

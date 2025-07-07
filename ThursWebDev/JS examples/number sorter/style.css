@@ -1,0 +1,11 @@
+body {
+  background-color: #B6B6B6;
+}
+#intro {
+    background-color: #CDDC39;
+    text-align:center;
+}
+#userInput {
+  background-color: #607D8B;
+  text-align:center;
+}

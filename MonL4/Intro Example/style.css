@@ -1,0 +1,88 @@
+h1 {
+    border: 5px outset red;
+    text-align: center;
+    background-color: yellow;
+    border-radius: 1em;
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+  .BigBlock {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #Left {
+    border: 5px outset blue;
+    width: 400px;
+    height: 600px;
+    margin-left: 0px;
+    border-radius: 1em;
+    padding: 5px;
+    background-color: purple;
+    font-size: 125%;
+    text-align: center;
+  }
+  
+  #Center {
+    border: 5px outset green;
+    width: 400px;
+    margin-left: 32px;
+    border-radius: 1em;
+    padding: 5px;
+    font-size: 125%;
+    background-color: blue;
+  }
+  
+  #Right {
+    border: 5px outset purple;
+    width: 400px;
+    margin-left: 32px;
+    border-radius: 1em;
+    padding: 5px;
+    font-size: 125%;
+    Text-align: center;
+    background-color: green;
+  }
+  
+  h2 {
+    text-align: center;
+    border: 5px outset red;
+    border-radius: 1em;
+    margin-top: -1px;
+    background-color: green;
+    font-family: cursive;
+  }
+  
+  h3 {
+    font-size: 175%;
+    text-align: center;
+    border: 5px inset red;
+    border-radius: 1em;
+    margin-top: -1px;
+    background-color: purple;
+    font-family: Seriff;
+  }
+  
+  h4 {
+    font-size: 117.5%;
+    text-align: center;
+    border: 5px outset red;
+    border-radius: 1em;
+    margin-top: -1px;
+    background-color: blue;
+    font-family: fantasy;
+  }
+  
+  h5 {
+    text-align: center;
+    font-size: 200%;
+  }
+  
+  /* p1 {
+    margin-left: 25%;
+  } */
+  
+  body {
+     background-image: url("https://image.freepik.com/free-photo/texture-background-white-satin_1048-10193.jpg");
+  }

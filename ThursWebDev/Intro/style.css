@@ -1,0 +1,25 @@
+#Left {
+    border: 2px solid red;
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+#Center {
+    border: 2px solid blue;
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+#Right {
+    border: 2px solid green;
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+.BigBlock {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}

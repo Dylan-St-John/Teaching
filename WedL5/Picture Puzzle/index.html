@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags for Bootstrap and JQuery -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS imports -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/ui-lightness/jquery-ui.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <!-- JS Imports -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.js"></script>
+  <!-- Rename the JQueryUI 'tooltip' and 'button' classes to 'uitooltip' and 'uibutton' so that they won't conflict with Bootstrap's 'tooltip' and 'button' classes. -->
+  <script>
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- 1) Create basic visual elements, including:
+   header, picture, selection menu, and two divs to contain the grid
+   and the puzzle pieces-->
+   <!-- 2) Create a puzzle piece (you'll need to use a style sheet)-->
+  <h1>Click the Picture to Start</h1>
+  <img id='final' src="https://i.redd.it/a4pu8ndutofe1.jpeg">
+  <div id="drop-zone" class="picture"></div>
+  <br>
+  <div id='pieces' class="'picture">
+    <!-- <div class="imgContainer">
+      <img id='piece' src="https://i.redd.it/a4pu8ndutofe1.jpeg">
+    </div> -->
+  </div>
+</body>
+
+</html>

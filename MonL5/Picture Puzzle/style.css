@@ -1,0 +1,28 @@
+body{
+  text-align: center !important;
+}
+/* Styling for the base image, anything with the picture/imgContainer class 
+or the image within the imgContainer*/
+#final{
+  width: 25rem;
+  height: 20rem;
+  overflow: hidden;
+  margin: auto;
+  display: block
+}
+
+.picture{
+  width: 25rem;
+  height: 20rem;
+  margin: auto;
+}
+
+.imgContainer{
+  overflow: hidden; 
+  float: left;
+}
+
+.imgContainer > img{
+  height: 20rem;
+  width: 25rem;
+} 

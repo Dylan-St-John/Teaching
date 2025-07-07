@@ -1,0 +1,17 @@
+button {
+  width: 300px;
+  height: 300px;
+  font-size: 40px;
+  border-radius: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+
+#count1 {
+  background-image: url("https://www.cookingclassy.com/wp-content/uploads/2014/06/final-one-chocolate-chip-cookie+srgb..jpg");
+}
+
+#count2 {
+  background-image: url("https://www.producemarketguide.com/sites/default/files/Commodities.tar/Commodities/carrots_commodity-page.png");
+}

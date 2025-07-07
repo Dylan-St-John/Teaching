@@ -1,0 +1,9 @@
+#movie-tabs{
+    width: 80%;
+}
+
+#myContent{
+    height: 40rem;
+    overflow-y: scroll;
+}
+    

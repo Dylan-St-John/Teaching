@@ -1,0 +1,6 @@
+/* 2) Give some styling to your canvas so its visable
+HINT: Border */
+
+canvas {
+    border:1px solid grey;
+}

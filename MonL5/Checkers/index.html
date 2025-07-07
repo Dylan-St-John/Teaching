@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Checkers </title>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script text="text/javascript" src="script.js"></script>
+    </head>
+
+<!-- inside of your body:
+    1) STORE THE FOLLOWING INSIDE A DIV WITH ID = "MAIN"
+    a)  header for title (h1)
+    b) Start game button (button)
+    c) p tag (for the flatline) with no content inside 
+    2) Create a div with id 'squares' where we will put squares
+    3) In your stylesheet, give some styling to the body
+-->
+    <body>     
+        <div id='main'>
+            <h1>Checkers</h1>
+            <button id="start">Start Game</button>
+            <p id='turn'></p>
+        </div>
+        <div id='squares'>
+            <div class="white square"></div>
+            <div class="red square">
+                <div class="white piece"></div>
+            </div>
+
+        </div>
+    </body>
+
+</html>

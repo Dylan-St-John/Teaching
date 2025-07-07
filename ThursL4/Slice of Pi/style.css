@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    background-color: #f44336;
+    border: 4px dotted black;
+    box-shadow: 5px 5px 3px black;
+    padding: 20px 8px;
+}
+body{
+    background-color: grey;
+    width: 600px;
+    margin: auto;
+}
+h4 {
+    background-color: #fff59d;
+    margin: 0px;
+    padding: 10px 20px;
+}
+.panel{
+    border-style: solid;
+    border-color: red;
+    background-color: darkolivegreen;
+    box-shadow: 5px 5px 3px black;
+    padding: 12px;
+    margin: 40px;
+}
+
+#order-button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}

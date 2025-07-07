@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags for Bootstrap and JQuery -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS imports -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/ui-lightness/jquery-ui.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+
+  <!-- JS Imports -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.js"></script>
+  <!-- Rename the JQueryUI 'tooltip' and 'button' classes to 'uitooltip' and 'uibutton' so that they won't conflict with Bootstrap's 'tooltip' and 'button' classes. -->
+  <script>
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"></script>
+  <script src="script.js"></script>
+  <title>IN CLASS</title>
+</head>
+
+<body>
+    <!-- 1) Its inside that body that we need to investigate 
+     The bootstrap documentation for creating a navbar at the
+     top of our page.  -->
+    <div id="movie-tabs" class="container-fluid">
+      <ul class="nav nav-tabs" id="myTabs">
+          <li class="nav-item">
+              <a class="nav-link active" id="brief-tab" data-toggle="tab" href="#brief-view">Brief View</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" id="detail-tab" data-toggle="tab" href="#detail-view">Detailed View</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" id="reception-tab" data-toggle="tab" href="#reception">Critical Reception</a>
+          </li>
+      </ul>   
+    </div>
+  
+    <div class="tab-content" id="myContent">
+      <div class="tab-pane fade show active" id="brief-view" >
+        <!-- 5) Add a table from the bootstrap documentation that
+         describes: Poster, Title, Year-->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Poster</th>
+              <th>Title</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="detail-view">
+        <h4> Oh </h4>
+      </div>
+      <div class="tab-pane fade" id="reception">
+        <h4> Hello </h4>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

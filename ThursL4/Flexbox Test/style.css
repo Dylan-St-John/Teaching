@@ -1,0 +1,40 @@
+/* Flexbox container */
+#container {
+    display: flex;
+    flex-direction: row; /* Items are side by side */
+    justify-content: space-between; /* Spaced evenly */
+    align-items: center; /* Centered vertically */
+    background-color: lightgray;
+    padding: 20px;
+    height: 200px;
+}
+
+/* Flex items */
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Individual box styles */
+.box1 { background-color: crimson; }
+.box2 { background-color: royalblue; }
+.box3 { background-color: seagreen; }
+
+/* Relative Positioning Example */
+.relative-box {
+    position: relative;
+    top: 20px;  /* Moves down by 20px */
+    left: 40px; /* Moves right by 40px */
+    width: 200px;
+    height: 50px;
+    background-color: orange;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+

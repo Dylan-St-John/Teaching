@@ -1,0 +1,44 @@
+body {
+    background-color: lightgray;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+canvas {
+    border-style: solid;
+    background-color: white;
+}
+
+.colorOption {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.clickButton{
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#buttons{
+    display: flex;
+    margin-left: 25%;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+    margin-left: 10px;
+
+}
+
+#green {
+    background-color: green;
+}

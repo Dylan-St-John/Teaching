@@ -1,0 +1,35 @@
+console.log('Hello World!');
+ball_array = [];
+canvas = document.getElementById('myCanvas')
+
+// 2) Draw a circle to the canvas
+// CHALLENGE: Fill in the circle
+
+// 3) Create a function called 'create_balls' that:
+// --> a) takes in one parameter for the amount of balls we would 
+// --> like to create
+function buildBalls(number) {
+    // --> b) for every ball we want to create,
+    for (var i = 0; i < number; i++) {
+        // --> create an object ball with the following properties:
+        // --> x coordinate, y coordinate, a colour, a size, 
+        // --> an x_speed and a y_speed
+        var ball = {
+            x:Math.random() * canvas.width,
+            y:Math.random() * canvas.height,
+            color:"black",
+            size:10,
+            x_speed:Math.random() * 3 + 1,
+            y_speed:Math.random() * 3 + 1
+        };
+        // --> c) add the ball you create an an empty array
+        ball_array.push(ball);
+    }
+}
+
+// TO TEST: Call the function and print out the array with
+// all the balls inside
+
+console.log(window.innerWidth);
+buildBalls(2);
+console.log(ball_array);

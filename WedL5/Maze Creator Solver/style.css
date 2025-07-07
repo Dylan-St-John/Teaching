@@ -1,0 +1,6 @@
+/* give the canvas object some basic styling */
+#myCanvas{
+    border-style: groove;
+    border-color: brown;
+    background-color: black;
+}

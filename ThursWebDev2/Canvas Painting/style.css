@@ -1,0 +1,21 @@
+/* Create the styling for:
+a) Canvas has a border
+
+Other things you could do:
+
+- centre the elements
+- manipulate the box model of the other elements
+- backgrounds for the buttons and website
+- just the text of the elements
+- the display property*/
+
+body {
+    text-align: center;
+}
+
+canvas {
+    border-style: solid;
+    background-color: white;
+    width: 500;
+    height: 500;
+}
