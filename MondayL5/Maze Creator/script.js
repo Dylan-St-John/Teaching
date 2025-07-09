@@ -8,6 +8,7 @@
 
 // TO TEST: Create an instance of this object and call 
 // its draw method - you should see a point on the screen
+// HINT: Objects, Object Methods/Properties, Object Constructor
 
 // 4) How do we create all the points we need? What about storing
 // them for future reference? --> Create a 2 dimensional array to

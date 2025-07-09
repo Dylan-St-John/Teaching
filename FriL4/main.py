@@ -10,6 +10,9 @@
 # --> for code that repeats
 
 # 1) Create a function that will handle user input
+# The purpose of this function is to run the game by continuially 
+# asking the user for inputs. Depending on what they input, we run
+# different parts of the game!
 
 # GENERAL PSUEDOCODE:
 # def main():

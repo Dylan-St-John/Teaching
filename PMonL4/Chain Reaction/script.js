@@ -1,6 +1,7 @@
-console.log('Hello World!');
+// console.log('Hello World!');
 ball_array = [];
 canvas = document.getElementById('myCanvas')
+const ctx = canvas.getContext("2d");
 
 // 2) Draw a circle to the canvas
 // CHALLENGE: Fill in the circle
@@ -30,6 +31,21 @@ function buildBalls(number) {
 // TO TEST: Call the function and print out the array with
 // all the balls inside
 
-console.log(window.innerWidth);
-buildBalls(2);
-console.log(ball_array);
+// console.log(window.innerWidth);
+buildBalls(100);
+// console.log(ball_array);
+
+// 4) Create a function called 'drawObject' that takes in an
+// object as a parameter and draws that object to the canvas
+// HINT: Canvas Api, Functions, Parameters
+
+function drawObject(object){
+    ctx.beginPath();
+    ctx.arc(object.x, object.y, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+}
+
+drawObject(ball_array[0])
+
+// TO TEST: Give drawObject one of the balls from the ball_array.
+// Draw all the balls from the ball_array using drawObject
