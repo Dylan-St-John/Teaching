@@ -33,19 +33,23 @@ function buildBalls(number) {
 
 // console.log(window.innerWidth);
 buildBalls(100);
-// console.log(ball_array);
+console.log(ball_array.length);
 
 // 4) Create a function called 'drawObject' that takes in an
 // object as a parameter and draws that object to the canvas
 // HINT: Canvas Api, Functions, Parameters
 
-function drawObject(object){
+function drawBall(ball){
     ctx.beginPath();
-    ctx.arc(object.x, object.y, 50, 0, 2 * Math.PI);
+    ctx.arc(ball.x, ball.y, 50, 0, 2 * Math.PI);
     ctx.stroke();
 }
 
-drawObject(ball_array[0])
+drawBall(ball_array[0])
 
 // TO TEST: Give drawObject one of the balls from the ball_array.
-// Draw all the balls from the ball_array using drawObject
+
+// 4b) Draw all the balls from the ball_array using drawObject
+// for the length of the array ball_array
+// call drawBall with an item from that array
+// HINT: Array.forEach
