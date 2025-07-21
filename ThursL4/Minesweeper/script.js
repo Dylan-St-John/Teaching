@@ -18,7 +18,14 @@ for (let r = 0; r < rows; r++){
     for (let c = 0; c < columns; c++){
         cell = board.rows[r].cells[c]
         row.push(cell)
-        cell.addEventListener("click", test(r, c))
+        // cell.addEventListener("click", test(r, c))
+        // If rolled the dice and it says 'make a mine',
+        if (Math.floor(Math.random) * 10 > 8){
+            // give this cell the attribute mine
+            cell.setAttribute("mine", 1);
+            // make it so when I click this mine, it gives me an alert
+            cell.addEventListener("click", alert("You go splody"));
+        }
     }
     array.push(row);
 }
@@ -30,3 +37,19 @@ function test(row, column){
     console.log("testing.." + row + " " + column)
 }
 // 4) Adding in mines - where do we start?
+
+
+// PSUEDOCODE FOR MINES TOUCHING:
+// function check if touching other mines
+    // minecount = 0
+    // for every row neighbour
+        // for every column neighbour
+            // if we are not on our current square and we are not on the edges
+                // if our mine attribute is 1
+                    // add to the mine count
+    // if minecount is equal to 0
+        // for every row neighbour
+            // for every column neighbour
+                // if we are not on our current square and we are not on the edges
+                    // if there is nothing written ontop of the square (innerText)
+                        // run this function again with that square that we are checking

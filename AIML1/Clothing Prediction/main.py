@@ -1,21 +1,42 @@
 import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Explain to me what this dataset is
-mnist = tf.keras.datasets.mnist
+mnist = tf.keras.datasets.fashion_mnist
 
-(x_train, y_train),(x_test, y_test) = mnist.load_data()
-x_train, x_test = x_train / 255.0, x_test / 255.0
+(train_images, train_labels),(test_images, test_labels) = mnist.load_data()
+train_images, test_images = train_images / 255.0, test_images / 255.0
+
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal',
+               'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 model = tf.keras.models.Sequential([
-  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Flatten(input_shape=(28,28)),
   tf.keras.layers.Dense(128, activation='relu'),
-  tf.keras.layers.Dropout(0.2),
-  tf.keras.layers.Dense(10, activation='softmax')
+  tf.keras.layers.Dense(10)
 ])
 
-model.compile(optimizer='adam',
-  loss='sparse_categorical_crossentropy',
-  metrics=['accuracy'])
+model.compile(
+  optimizer='adam',
+  loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+  metrics=['accuracy']
+)
 
-model.fit(x_train, y_train, epochs=5)
-model.evaluate(x_test, y_test)
+model.fit(train_images, train_labels, epochs=10)
+
+probability_model = tf.keras.Sequential([
+    model,
+    tf.keras.layers.Softmax()
+])
+
+predictions = probability_model.predict(test_images)
+
+label = np.argmax(predictions[723])
+print("Model predicts: ", class_names[label])
+
+plt.figure()
+plt.imshow(test_images[723])
+plt.colorbar()
+plt.grid(False)
+plt.show()

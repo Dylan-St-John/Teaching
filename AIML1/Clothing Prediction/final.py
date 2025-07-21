@@ -33,14 +33,14 @@ probability_model = tf.keras.Sequential([model,tf.keras.layers.Softmax()])
 
 # Evaluate the 10000 test images and make predications
 predictions = probability_model.predict(test_images)
-print(predictions[400])
+print(predictions[475])
 
-label = np.argmax(predictions[400])
+label = np.argmax(predictions[475])
 print("Model predicts: ", class_names[label])
 
 # Check
 plt.figure()
-plt.imshow(test_images[400])
+plt.imshow(test_images[475])
 plt.colorbar()
 plt.grid(False)
 plt.show()

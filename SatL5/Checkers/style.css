@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  background-color: #e2c4f2;
+  
+}
+
+#squares {
+  width: 425px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  margin-left: -225px;
+}
+
+.square {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin: 3px;
+}
+
+.white { 
+  background-color: #e4c9f2;
+}
+
+.red {
+  background-color: #856993;
+}
+
+.black {
+  background-color: #2e173a;
+}
+
+.piece {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 2px;
+  margin-top: 2px;
+  border: .5px solid white;
+}
+
+.square > .white {
+  border-color: #2e173a;
+}

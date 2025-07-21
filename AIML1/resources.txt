@@ -1,0 +1,21 @@
+MATPLOTLIB
+https://www.w3schools.com/python/matplotlib_intro.asp
+https://matplotlib.org/stable/gallery/index.html
+
+NUMPY
+https://www.w3schools.com/python/numpy/default.asp
+https://numpy.org/doc/stable/index.html
+
+PANDAS
+https://www.w3schools.com/python/pandas/default.asp
+https://pandas.pydata.org/docs/user_guide/10min.html
+
+MACHINE LEARNING
+https://www.youtube.com/watch?v=aircAruvnKk&t=268s&ab_channel=3Blue1Brown
+https://www.youtube.com/watch?v=Ilg3gGewQ5U&t=473s&ab_channel=3Blue1Brown
+https://www.youtube.com/watch?v=alfdI7S6wCY&t=2726s&ab_channel=AlexanderAmini
+https://www.w3schools.com/ai/default.asp
+https://www.w3schools.com/ai/ai_perceptrons.asp
+https://miro.medium.com/v2/resize:fit:1199/1*N8UXaiUKWurFLdmEhEHiWg.jpeg
+https://assets.zilliz.com/The_Architecture_of_Convolutional_Neural_Networks_8263469ad1.png
+https://media.geeksforgeeks.org/wp-content/uploads/20231204130132/RNN-vs-FNN-660.png
