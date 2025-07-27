@@ -30,26 +30,45 @@ function buildBalls(number) {
 
 // TO TEST: Call the function and print out the array with
 // all the balls inside
-
-// console.log(window.innerWidth);
-buildBalls(100);
-console.log(ball_array.length);
+buildBalls(5);
 
 // 4) Create a function called 'drawObject' that takes in an
 // object as a parameter and draws that object to the canvas
 // HINT: Canvas Api, Functions, Parameters
-
-function drawBall(ball){
+function drawObject(object){
     ctx.beginPath();
-    ctx.arc(ball.x, ball.y, 50, 0, 2 * Math.PI);
-    ctx.stroke();
+    ctx.arc(object.x, object.y, object.size, 0, 2 * Math.PI);
+    ctx.fillStyle = 'black';
+    ctx.fill();
 }
-
-drawBall(ball_array[0])
-
-// TO TEST: Give drawObject one of the balls from the ball_array.
 
 // 4b) Draw all the balls from the ball_array using drawObject
 // for the length of the array ball_array
 // call drawBall with an item from that array
 // HINT: Array.forEach
+ball_array.forEach(drawObject);
+
+function updateBalls(ball){
+    // if the balls x coordinate + (its size divided by 2) is greater than 
+    // the width of the canvas 
+    // OR the balls x coordinate - (its size divided by 2)is less than 0
+        // inverse the balls x speed
+    
+    // if the balls y coordinate + (its size divided by 2) is 
+    // greater than the height of the canvas 
+    // OR if the balls y coordinate - (its size divided by 2) 
+    // is less than 0
+        // inverse the balls y speed
+
+    // add the balls x speed to its x coordinate
+    // add the balls y speed to its coordinate
+}
+
+function gameLoop(){
+    // clear the canvas
+    // draw balls
+    // update balls
+    console.log("test")
+}
+
+let interval = setInterval(gameLoop, 1000)

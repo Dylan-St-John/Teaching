@@ -1,9 +1,10 @@
 const col = 10;
 const row = 10;
-const playerGrid = [];
+const playerBoard = [];
+const compBoard = [];
+const compGuessBoard = [];
 
 $(document).ready(function(){
-
     // This function should initialise both game boards
     function init(){
         // this nested for loop generates the game_boards
@@ -18,13 +19,33 @@ $(document).ready(function(){
                 // let txt2 = $("<div></div>").addClass('gridsquare')
 
                 $("#player").append(txt1);
+                $("#computer").append(txt1);
                 rowArray.push("W");
             }
-            playerGrid.push(rowArray);
+            playerBoard.push(rowArray);
+            compBoard.push(rowArray.slice());
+            compGuessBoard.push(rowArray.slice());
         }
         console.log(playerGrid);
     }
 
     init();
+
+    // 2) Create an object constructor for a Ship.
+    // It should require (to create it, parameters): 
+    // a name, a size and which board it will be on
+    // TO TEST: Create an instance of the Ship and print out its name
+    // Names are: Carrier, Battleship, Cruiser, Submarine, and Destroyer
+    // HINT: Object Constructors
+
+    // 3) Create an method called 'place' that finds a place 
+    // to put the ship.
+    // SHIP PLACEMENT IDEAS:
+    // 1) Change the colour of the gridsquare to a player
+    // 2) Randomised placement
+    // 3) Ship has a structure
+    // --> size (how many squares long)
+    // --> orientation (is it horizontal or vertical?)
+    // 4) Ships are in the grid
 
 });

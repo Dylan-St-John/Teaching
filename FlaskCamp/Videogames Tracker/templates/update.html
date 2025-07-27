@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Videogame Tracker</title>
+    <link href="../static/base.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <nav class = "navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="#"> VideogameTracker </a>
+            </div>
+            <ul class= "nav-links">
+                <li>
+                    <a href="/">List</a>
+                </li>
+                <li>
+                    <a href="/add">Add</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-section">
+        <h2>Update Book:</h2>
+        <div class="form">
+            <form action="/update/{{videogame.id}}" method="POST">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <div>
+                        <input type="text" class="form-control" name="title" id="title" value="{{videogame.title}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <div>
+                        <textarea rows="4" cols="50" class="form-control" name="description" id="description">{{videogame.description}}</textarea>
+                    </div>
+                </div>
+                <button type="submit"
+                class="addbutton">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

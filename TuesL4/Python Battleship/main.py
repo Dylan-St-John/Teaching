@@ -2,6 +2,7 @@
 # Have you played before? How does it work?
 # WARMUP: Create a 2 dimensional list of 0s 
 # (10 rows and 10 columns). Print this to the console.
+import random
 
 hit_board = []
 enemy_board = []
@@ -37,15 +38,18 @@ class Ship:
         self.name = name
         self.position = []
         self.damage = 0
+        self.horizontal = random.choice(True, False)
 
     # b) Create a METHOD: 
     # placing the ship on the board (somewhere random)
+
     # Things to consider:
    
     # - keep track of each unit of the ship (put in positions array)
 
-     # - making sure it isnt placed off the edge
+    # - making sure it isnt placed off the edge
     # - horizontal or vertical? (random)
+    
     # --> if its horizontal, you cannot place it at the edges of the rows
     # --> pick a random number between the first column and the last
     # column minus the length of the ship
@@ -57,7 +61,9 @@ class Ship:
     # - dont place a ship where this already a ship
     # we should check the enemy board for every position our ship
     # would occupy, and if there is an enemy ship dont place the ship
-
+    
+    # if we have checked where we want to place our ship
+    # and the positions are all empty, add the positions to the position array
 
 
 # c) Create some instances of ships!

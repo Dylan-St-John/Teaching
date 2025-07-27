@@ -34,6 +34,7 @@ $(document).ready(function() {
 
     function getOptions(color, row, col){
         //check color, "white" or "black"
+        console.log(color, row, col)
     }
   
     function clearOptions(){
@@ -41,7 +42,17 @@ $(document).ready(function() {
     }
   
     function optionHelper(clickedPiece){
-        console.log(clickedPiece);
+        // console.log(clickedPiece);
+        // 1) find the parent of the clicked piece
+        parent = clickedPiece.parent();
+        // console.log(parent);
+        // 2) Extract the row and column of the parent square
+        pid = parent.attr("id").split("_")
+        // console.log(pid);
+        // 3) run getOptions with the color of the piece and the
+        // squares row and col values
+        getOptions(clickedPiece.css("background-color"), parseInt(pid[0]), parseInt(pid[1]));
+        // HINT: jQuery Traversing, jQuery Get, jQuery CSS
     }
   
   }); //end click function

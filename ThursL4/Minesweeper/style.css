@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  background-color: lightBlue;
+  font-family: monospace;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-style: solid;
+  background-color: white;
+}
