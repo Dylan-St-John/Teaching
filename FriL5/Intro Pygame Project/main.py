@@ -15,6 +15,9 @@ running = True
 # CHALLENGE: Make the ball a Class
 
 ball = pygame.image.load("ball.png")
+ball = pygame.transform.smoothscale(ball, (300, 300))
+ball_rect = ball.get_rect()
+
 
 while running:
     # poll for events
@@ -35,3 +38,30 @@ while running:
     clock.tick(60)  # limits FPS to 60
 
 pygame.quit()
+
+# import sys, pygame
+# pygame.init()
+
+# size = width, height = 320, 240
+# speed = [2, 2]
+# black = 0, 0, 0
+
+# screen = pygame.display.set_mode(size)
+
+# ball = pygame.image.load("ball.png")
+# ball = pygame.transform.smoothscale(ball, (30, 30))
+# ballrect = ball.get_rect()
+
+# while True:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT: sys.exit()
+
+#     ballrect = ballrect.move(speed)
+#     if ballrect.left < 0 or ballrect.right > width:
+#         speed[0] = -speed[0]
+#     if ballrect.top < 0 or ballrect.bottom > height:
+#         speed[1] = -speed[1]
+
+#     screen.fill(black)
+#     screen.blit(ball, ballrect)
+#     pygame.display.flip()

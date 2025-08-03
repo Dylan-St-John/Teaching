@@ -46,12 +46,12 @@ function drawObject(object){
 // for the length of the array ball_array
 // call drawBall with an item from that array
 // HINT: Array.forEach
-ball_array.forEach(drawObject);
+
 
 function updateBalls(ball){
     // if the balls x coordinate + (its size divided by 2) is greater than 
     // the width of the canvas 
-    // OR the balls x coordinate - (its size divided by 2)is less than 0
+    // OR the balls x coordinate - (its size divided by 2) is less than 0
         // inverse the balls x speed
     
     // if the balls y coordinate + (its size divided by 2) is 
@@ -61,13 +61,17 @@ function updateBalls(ball){
         // inverse the balls y speed
 
     // add the balls x speed to its x coordinate
-    // add the balls y speed to its coordinate
+    ball.x = ball.x_speed + ball.x
+    // add the balls y speed to its y coordinate
+    ball.y = ball.y_speed + ball.y
 }
 
 function gameLoop(){
     // clear the canvas
     // draw balls
+    ball_array.forEach(drawObject);
     // update balls
+    ball_array.forEach(updateBalls);
     console.log("test")
 }
 

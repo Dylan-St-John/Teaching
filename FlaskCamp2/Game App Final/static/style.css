@@ -1,0 +1,77 @@
+.button.secondary {
+    background-color: #949494;
+    border-color: transparent;
+    color: #fff;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 188px){
+    .container>.navbar .navbar-menu, .navbar>.container .navbar-menu {
+    margin-right: -.75rem;
+}
+.navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    box-shadow:none;
+}
+.navbar, .navbar-end, .navbar-menu, .navbar-start {
+    align-items: stretch;
+    display: flex;
+}
+}
+.hero-body {
+    padding: 0rem 1.5rem;
+}
+.box {
+    height: 450px;
+    width:500px;
+    text-align: left;
+    padding: 0.5rem;
+}
+.title{
+    padding-left: 25%;
+    width: 500px;
+}
+.hero.is-primary .title {
+    color: #fff;
+    text-align: left;
+    margin-left: 20%;
+}
+img {
+    background-color: white;
+    border-radius: 200px;
+}
+.nav-header {
+    padding: .5rem .75rem;
+}
+.username-display {
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 23px;
+    padding-left: 5px;
+}
+.scoretext {
+    height: 35px;
+    width: 200px;
+    border: 1px solid blue;
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+h2 {
+    font-weight: bold;
+}
+
+table td, table th {
+    text-align: center;
+    vertical-align: top;
+    padding-left: 20%;
+    width: 200px;
+    font-size: 30px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding-left: 20%;
+}

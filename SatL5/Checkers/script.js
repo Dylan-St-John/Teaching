@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#start").click(function() {
     $(this).hide();
     var id;
+    const options = [];
     for (var i = 0; i < 8; i++){
       for (var j = 0; j < 8; j++){
         if ((i+j)%2 == 0){
@@ -35,14 +36,36 @@ $(document).ready(function() {
     function getOptions(color, row, col){
         //check color, "white" or "black"
         console.log(color, row, col)
+
+        // if the color of the piece is white
+        if (color == "rgb(228, 201, 242)"){
+          // we can present options moving down the grid
+          options.push($('#' + (row+1) + '_' + (col-1)))
+          options.push($('#' + (row+1) + '_' + (col+1)))
+        }
+        // otherwise if the color of the piece is black
+        else if (color == "rgb(46, 23, 58)"){
+          // we can present options moving up the grid
+          options.push($('#' + (row-1) + '_' + (col-1)))
+          options.push($('#' + (row-1) + '_' + (col+1)))
+        }
+        console.log(options)
+        for (i=0;i<options.length;i++){
+          options[i].css("background-color", "yellow");
+        }
+
     }
   
     function clearOptions(){
-        
+        // for every option
+          // change its ccs back to its default color
+          // remove all the options from the options list
+          // HINT: jQuery CSS, JS Array Methods
     }
   
     function optionHelper(clickedPiece){
         // console.log(clickedPiece);
+        clearOptions();
         // 1) find the parent of the clicked piece
         parent = clickedPiece.parent();
         // console.log(parent);

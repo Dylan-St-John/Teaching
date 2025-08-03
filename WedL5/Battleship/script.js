@@ -26,7 +26,6 @@ $(document).ready(function(){
             compBoard.push(rowArray.slice());
             compGuessBoard.push(rowArray.slice());
         }
-        console.log(playerGrid);
     }
 
     init();
@@ -37,6 +36,23 @@ $(document).ready(function(){
     // TO TEST: Create an instance of the Ship and print out its name
     // Names are: Carrier, Battleship, Cruiser, Submarine, and Destroyer
     // HINT: Object Constructors
+
+    function Ship(name, size, board){
+        this.name = name;
+        this.size = size;
+        this.board = board;
+
+        this.place = function(){
+            this.board[3][3] = "S"
+            this.board[3][4] = "S"
+            this.board[3][5] = "S"
+        }
+    }
+
+    cruiser = new Ship("Cruiser", 3, playerBoard);
+    console.log(cruiser.name);
+    cruiser.place();
+    console.log(playerBoard);
 
     // 3) Create an method called 'place' that finds a place 
     // to put the ship.

@@ -1,0 +1,14 @@
+Data Analysis is:
+The process of cleaning, transforming and modelling
+data to discover useful information / make insights
+
+Data Visualisation:
+Representing data on a graph/chart/table/maps
+
+Basic Statistics:
+1) Mean: Average value of a dataset (add them all
+together and divide by the amount of entries)
+2) Median: Middle point of the dataset
+3) Mode: Most common value in a dataset
+4) Range: Difference between the largest number
+and the smallest number

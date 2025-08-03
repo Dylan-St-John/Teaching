@@ -10,6 +10,7 @@ function Point(x, y){
     // b) property for its x and y coordinates
     this.x = x;
     this.y = y;
+    this.neighbours = [];
     // c) A method that draws that point to the screen (based on its x and 
     // y coordinates)
     this.draw = function(){
@@ -39,7 +40,6 @@ function Point(x, y){
 
 // HINT: Nested For Loop
 
-
 // IF YOU ARE STRUGGLING WITH SOMEWHERE TO START, FOCUS ON MAKING
 // ONE ROW OF POINTS
 function initialise(){
@@ -56,13 +56,33 @@ function initialise(){
     for (j=0; j < 60; j++){
         row = []
         for (i = 0; i < 60; i++){
+            console.log(j, i);
             point = new Point(8 + i * 10, 10 + j * 10);
             point.draw();
             row.push(point)
+
+            // condition for adding neighbours above us (cant be first row)
+            if (j > 0){
+                // exchange neighbours top to bottom
+                // add to the points neighbour list the point above it
+                // add to the point above it our point
+            }
+
+            // condition for adding neighbours to the left of us (cannot be first column)
+            if (i > 0){
+                // exchange neighbours left to right
+                // add to the points neighbour list the point above it
+                // add to the point above it our point
+            }
+            
+             
         }
-        console.log(row)
+        // console.log(row)
         grid.push(row);
     }
 }
 
 initialise();
+
+// TO TEST NEIGHBORS: print out a random points neighbours list.
+// Does it make it sense?

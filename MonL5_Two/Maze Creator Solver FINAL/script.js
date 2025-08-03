@@ -85,7 +85,7 @@ function initialize(){
     var row = [];
     for(var x = 0; x<gridSize; x++){
       row.push(new Point(x, y));
-      row[x].draw();
+      // row[x].draw();
       if(y>0){
         
         /**
