@@ -1,0 +1,31 @@
+#1) What kind of information do we need to keep track of?
+- health of each pokemon
+- moves (list)
+- speed
+- name of pokemon
+- list of pokemons
+
+# 2) How are we going to keep track of each individual pokemon?
+- class
+--> one class for the archetype pokemon
+--> inheritance
+
+# 3) Are there any player/move stats that we need to track?
+- type advantages / type of move
+- power (how much damage it will do)
+- accuracy (chance of landing)
+- speed
+- How many times can you use the move
+
+# 4) How should our program begin?
+-->  What pokemon are you gonna use (building a roster)
+--> Initiate combat (what the opponents pokemon is)
+--> Fight until one is victor (there are no more pokemon left)
+
+# 5) What kind of functions are we gonna need in this program?
+- Combat
+- Main Game
+--> Select pokemons and names
+--> Fight enemy, taking in moves everytime until someone is the victor
+----> What if the trainers have more than 1 pokemon?
+--> End game screen

@@ -33,6 +33,13 @@ $(document).ready(function() {
         optionHelper($(this));
     })
 
+    $(".red.square").click(function(){
+      // if the red squares color is the option color
+        // we move the piece to that location
+        // clear options again
+        // change the turn to the other player
+    })
+
     function getOptions(color, row, col){
         //check color, "white" or "black"
         console.log(color, row, col)
@@ -58,9 +65,14 @@ $(document).ready(function() {
   
     function clearOptions(){
         // for every option
+        for (let i = options.length-1; i >= 0; i--){
           // change its ccs back to its default color
+          options[i].css("background-color", "#856993");
           // remove all the options from the options list
+          options.splice(i,  1)
           // HINT: jQuery CSS, JS Array Methods
+        }
+
     }
   
     function optionHelper(clickedPiece){

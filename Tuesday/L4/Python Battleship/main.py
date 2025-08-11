@@ -71,44 +71,45 @@ class Ship:
         row = 0
         col = 0
         while empty_space is False:
+            empty_space = True
             # try and place my ship
             if self.horizontal is True:
                 # im trying to place it horizontally
                 # pick random row + col
                 row = random.randint(0, len(self.board)-1)
-                col = random.randint(0, len(self.board)-self.size)
+                col = random.randint(0, len(self.board[0])-self.size-1)
 
                 # for every unit of the ship
                 for i in range(self.size):
                         # if that unit intersects with 
                         # a board already on our ship
-                        if self.board[row][col+i] == "1":
-                            continue
+                        if self.board[row][col+i] != "0":
+                            empty_space = False
+                            break
 
             else:
                 # im trying to place it vertical
                 # pick random row + col
-                row = random.randint(0, len(self.board)-self.size)
-                col = random.randint(0, len(self.board)-1)
+                row = random.randint(0, len(self.board)-self.size-1)
+                col = random.randint(0, len(self.board[0])-1)
 
                 # for every unit of the ship
                 for i in range(self.size):
                         # if that unit intersects with 
                         # a board already on our ship
-                        if self.board[row+i][col] == "1":
-                            continue
-
-            empty_space = True
+                        if self.board[row+i][col] != "0":
+                            empty_space = False
+                            break
 
         if self.horizontal is True:
             for i in range(self.size):
                 self.position.append([row,col+i])
-                self.board[row][col+i] = "1"
+                self.board[row][col+i] = self.name[0]
 
         else:
             for i in range(self.size):
                 self.position.append([row+i,col])
-                self.board[row+i][col] = "1"
+                self.board[row+i][col] = self.name[0]
 
 # c) Create some instances of ships!
 
@@ -121,11 +122,11 @@ def main():
     global hit_board
     hit_board = create_board(hit_board)
 
-    ships.append(Ship("submarine", 1, hit_board))
-    ships.append(Ship("corsair", 2, hit_board))
-    ships.append(Ship("cruiser", 3, hit_board))
-    ships.append(Ship("battleship", 4, hit_board))
-    ships.append(Ship("carrier", 5, hit_board))
+    ships.append(Ship("a", 1, hit_board))
+    ships.append(Ship("b", 2, hit_board))
+    ships.append(Ship("c", 3, hit_board))
+    ships.append(Ship("d", 4, hit_board))
+    ships.append(Ship("e", 5, hit_board))
     
     for ship in ships:
         ship.place()
@@ -147,8 +148,11 @@ def main():
         if (guess_row < 0 or guess_row > (len(hit_board) - 1) or guess_row == "") or (guess_col < 0 or guess_col > (len(hit_board[0]) - 1) or guess_col == ""):
             print("Har har har, that ain't on yonder board, try again!")
         
-        # c) The user needs to input new values if the 
-        # value has already been guessed (WE WILL RETURN TO THIS)
+        #Check if the player has fired at that location already.
+        elif(hit_board[guess_row][guess_col] != "0"):
+            print("Yer tryin' ta shoot at the same spot twice are ye? Fool! Try again")
+
+        # What should we do if its a valid guess?
 
 if __name__ == "__main__":
     main()

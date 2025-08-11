@@ -54,6 +54,10 @@ $(document).ready(function(){
     cruiser.place();
     console.log(playerBoard);
 
+    // TASK: For every "S" on the playerBoard, change the coresponding
+    // gridsquare to have the colour grey.
+
+
     // 3) Create an method called 'place' that finds a place 
     // to put the ship.
     // SHIP PLACEMENT IDEAS:
