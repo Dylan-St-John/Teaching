@@ -1,0 +1,5 @@
+--> What are classes?
+- store information
+
+--> What an example?
+- main class

@@ -1,0 +1,106 @@
+#game{
+    width: 19rem;
+    height: 19rem;
+    margin: auto;
+    background-color:#666666;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+#overlay{
+    width: 19rem;
+    height: 19rem;
+    background-color: gray;
+    opacity: .8;
+    position: absolute;
+    margin-top: -.5rem;
+    margin-left: -.5rem;
+}
+
+.game-over{
+    position: absolute;
+    font-size: 25;
+    color: white;
+    margin-top: 7.5rem;
+    margin-left: 4rem;
+    background-color: #404040;
+    width: 10rem;
+    height: 3rem;
+    border-radius: .3rem;
+}
+
+.score-display {
+    display: inline-flex;
+}
+
+body{
+    text-align: center !important;
+}
+
+.square{
+    width: 4rem;
+    height: 4rem;
+    margin: .25rem;
+    float: left;
+    background-color: #a6a6a6;
+    text-align: center;
+}
+.tile{
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    text-align: center;
+    padding-top: .5rem;
+    font-size: 25;
+    position: absolute;
+}
+
+.s2{
+background-color: #e6e6e6;
+color: black;
+}
+
+.s4{
+background-color: #d9d9d9;
+color: black;
+}
+
+.s8{
+background-color: #ffa366;
+}
+
+.s16{
+background-color: #ff751a;
+}
+
+.s32{
+    background-color: #ff4d4d;
+}
+
+.s64{
+background-color: #cc2900;
+}
+
+.s128{
+background-color: #e6ac00;
+}
+
+.s256{
+background-color: #ffbf00;
+}
+
+.s512{
+background-color: #ffc61a;
+}
+
+.s1024{
+background-color: #ffcc33;
+padding-top: 1rem;
+font-size: 20;
+}
+
+.s2048{
+background-color: #cccc00;
+padding-top: 1rem;
+font-size: 20;
+}

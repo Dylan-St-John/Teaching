@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <title>2048</title>
+        <!-- Required meta tags for Bootstrap and JQuery -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS imports -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/ui-lightness/jquery-ui.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+        <!-- JS Imports -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.js"></script>
+        <!-- Rename the JQueryUI 'tooltip' and 'button' classes to 'uitooltip' and 'uibutton' so that they won't
+        conflict with Bootstrap's 'tooltip' and 'button' classes. -->
+        <script>
+            $.widget.bridge('uitooltip', $.ui.tooltip);
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <h1>2048</h1>
+        <div id="game">
+            <div id="grid"></div>
+            <div id="tiles"></div>
+            <div id="overlay"></div>
+            <p class="game-over">Game Over</p>
+        </div>
+        </br>
+        <button type="button" class="btn btn-secondary" onclick="init()"><b>Restart</b></button>
+        <h3 id = "score" class="score-display"> 
+            <span class="badge badge-secondary">Score:<br/>0</span>
+        </h3>
+        <h3 id = "highscore" class="score-display"> 
+            <span class="badge badge-secondary">Best:<br/>0</span>
+        </h3>
+
+    </body>
+</html>

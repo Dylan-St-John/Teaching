@@ -1,0 +1,21 @@
+body{
+ text-align: center !important;
+}
+
+#game{
+    width: 19rem;
+    height: 19rem;
+    margin: auto;
+    background-color:#666666;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+.square{
+    width: 4rem;
+    height: 4rem;
+    margin: .25rem;
+    float: left;
+    background-color: #a6a6a6;
+    text-align: center;
+}

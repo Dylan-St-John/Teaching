@@ -113,7 +113,6 @@ class Ship:
 
 # c) Create some instances of ships!
 
-
 # 3) Create a main game function that asks the user 
 # for input. Start the main game function by calling 
 # the previous two functions

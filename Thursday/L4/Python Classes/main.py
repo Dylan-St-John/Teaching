@@ -8,6 +8,44 @@
 # 2) What is OOP?
 # 3) What is a class? 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Person:
   def __init__(self, name, age):
     self.name = name
