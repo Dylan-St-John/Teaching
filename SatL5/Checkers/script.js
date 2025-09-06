@@ -1,8 +1,11 @@
 $(document).ready(function() {
   $("#start").click(function() {
-    $(this).hide();
     var id;
     const options = [];
+    let whiteTurn = true;
+    let selected;
+
+    $(this).hide();
     for (var i = 0; i < 8; i++){
       for (var j = 0; j < 8; j++){
         if ((i+j)%2 == 0){
@@ -22,22 +25,42 @@ $(document).ready(function() {
           
         } //end if/else
       }//end inner for loop
-       
+    
+    function changeTurnText(){
+      if (whiteTurn){
+        $("#turn").text("Whites Turn");
+      }
+      else{
+        $("#turn").text("Blacks Turn");
+      }
+    }
+    changeTurnText();
+    
     } //end outer for loop
     $(".white.piece").click(function() {
+      if(whiteTurn){
         optionHelper($(this));
-
+      }
     })
 
     $(".black.piece").click(function() {
+      if(!whiteTurn){
         optionHelper($(this));
+      }
     })
 
     $(".red.square").click(function(){
       // if the red squares color is the option color
+      if ($(this).css("background-color") == "rgb(255, 255, 0)"){
         // we move the piece to that location
+        $(this).append(selected);
         // clear options again
-        // change the turn to the other player
+        clearOptions();
+        // change the turn to the other players
+        whiteTurn = !whiteTurn;
+        changeTurnText();
+      }
+
     })
 
     function getOptions(color, row, col){
@@ -80,6 +103,7 @@ $(document).ready(function() {
         clearOptions();
         // 1) find the parent of the clicked piece
         parent = clickedPiece.parent();
+        selected = clickedPiece;
         // console.log(parent);
         // 2) Extract the row and column of the parent square
         pid = parent.attr("id").split("_")

@@ -15,7 +15,6 @@ def create_board(board):
     return board
         
 
-
 # 2) Create a function that takes in a game_board as a parameter. 
 # Print this board to the console
 
@@ -23,7 +22,6 @@ def print_board(board):
     for row in board:
         print(" ".join(row))
     print("\n")
-
 
 
 # 4) Create a ship class that has the following properties / methods:

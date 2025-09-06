@@ -39,8 +39,8 @@ def attack(player, playerMoves, enemy, enemyMoves):
     enemyDodge = random.random()
     enemyShield = random.randint(0, 50)
 
-    print(playerDamage, playerSpeed, playerDodge, playerShield)
-    print(enemyDamage, enemySpeed, enemyDodge, enemyShield)
+    # print(playerDamage, playerSpeed, playerDodge, playerShield)
+    # print(enemyDamage, enemySpeed, enemyDodge, enemyShield)
 
     if playerSpeed > enemySpeed:
         print("You attack quickly with {}.".format(playerMove))

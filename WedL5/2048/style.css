@@ -9,6 +9,7 @@ body{
     background-color:#666666;
     padding-left: .5rem;
     padding-top: .5rem;
+    border: 2px solid black;
 }
 
 .square{
@@ -18,4 +19,13 @@ body{
     float: left;
     background-color: #a6a6a6;
     text-align: center;
+}
+
+.score-text{
+    width: 6rem;
+    height: 2rem;
+    display: inline-block;
+    background-color: #666666;
+    border: 3px solid black;
+    font-size: 18px;
 }

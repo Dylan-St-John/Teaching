@@ -22,15 +22,24 @@
         $.widget.bridge('uibutton', $.ui.button);
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+
 
 </head>
 <body>
-     <h1>2048</h1>
-        <div id="game">
+    <h1>2048</h1>
+    <div id="game">
         <div id="grid">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
             
         </div>
     </div>
+    <br>
+    <button type="button" class="btn btn-secondary">Restart</button>
+    <h3 id="score" class="score-text">Score: </h3>
+    <h3 id="highscore" class="score-text">Highscore: </h3>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
