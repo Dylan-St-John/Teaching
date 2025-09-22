@@ -1,0 +1,153 @@
+body {
+	text-align: center;
+	background-color: black;
+	color: red;
+	overflow:hidden;
+}
+.clock {
+	/*background-color: #111111;*/
+	position: absolute;
+	width: 20em;
+	height: 20em;
+	margin-left: -10em;
+	margin-top: -10em;
+	border: 0.25em solid teal;
+	border-radius: 50%;
+	animation: rotation 36s linear infinite;
+}
+
+.clock:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	margin-left: -168px;
+	margin-top: -8px;
+	position: absolute;
+	border-radius: 50%;
+	border: 0.5em solid teal;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotateZ(360deg);
+	}
+	to {
+		transform: rotateZ(0deg);
+	}
+}
+
+.tick {
+	width: 1em;
+	height: 1em;
+	/*background-image: linear-gradient(teal 30%, grey 45%, black 60%, black 90%, black 100%);*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 0.8em;
+	color: charcoal;
+}
+
+
+.t1 {
+	transform: rotateZ(30deg);
+	margin-left: 24%;
+	margin-top: -43%;
+}
+.t2 {
+	transform: rotateZ(60deg);
+	margin-left: 41%;
+	margin-top: -25%;
+}
+.t3 {
+	transform: rotateZ(90deg);
+	margin-left: 47%;
+	margin-top: 0%;
+}
+.t4 {
+	transform: rotateZ(120deg);
+	margin-left: 40%;
+	margin-top: 23%;
+}
+.t5 {
+	transform: rotateZ(150deg);
+	margin-left: 23%;
+	margin-top: 39%;
+}
+.t6 {
+	transform: rotateZ(180deg);
+	margin-left: 0%;
+	margin-top: 46%;
+}
+.t7 {
+	transform: rotateZ(210deg);
+	margin-left: -24%;
+	margin-top: 40%;
+}
+.t8 {
+	transform: rotateZ(240deg);
+	margin-left: -42%;
+	margin-top: 23%;
+}
+.t9 {
+	transform: rotateZ(270deg);
+	margin-left: -49%;
+	margin-top: 0%;
+}
+.t10 {
+	transform: rotateZ(300deg);
+	margin-left: -43%;
+	margin-top: -26%;
+}
+.t11 {
+	transform: rotateZ(330deg);
+	margin-left: -25%;
+	margin-top: -44%;
+}
+.t12 {
+	transform: rotateZ(0deg);
+	margin-left: 0%;
+	margin-top: -50%;
+}
+
+.inner {
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	border: 0.25em solid aquamarine;
+	position: absolute;
+	transform: translate-3d(-50%, 0px, 50px);
+	left: 50%;
+	top: 50%;
+	margin-left: -1.5em;
+	margin-top: -1.5em;
+	animation: rotation 10s linear infinite;
+}
+.inner:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	left: -8px;
+	top: -8px;
+	border: 0.5em solid aquamarine;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	animation: rotation 2s linear infinite;
+}
+
+
+figure {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotateX(-25deg) rotateY(-30deg);
+	transform-style: preserve-3d;
+	transition: 3s ease all;
+}
+figure:hover {
+	transform: rotateX(0deg) rotateY(0deg);
+}

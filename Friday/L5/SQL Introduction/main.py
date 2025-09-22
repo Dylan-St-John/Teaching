@@ -1,6 +1,12 @@
 # 1) Connect to your database
 # and print it the contents of it in the console.
 
+import sqlite3
+
+conn = sqlite3.connect("imdb.db")
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM movies")
+
 # 2) Create an interface for your database. 
 # Your interface should support the following options:
 # a) Add a new record
@@ -25,3 +31,5 @@ def main():
             add_record(user_input)
         elif user_input == "2":
             remove_record(user_input)
+
+# main()

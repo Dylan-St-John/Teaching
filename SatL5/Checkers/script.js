@@ -66,19 +66,72 @@ $(document).ready(function() {
     function getOptions(color, row, col){
         //check color, "white" or "black"
         console.log(color, row, col)
-
+        let option;
         // if the color of the piece is white
         if (color == "rgb(228, 201, 242)"){
-          // we can present options moving down the grid
-          options.push($('#' + (row+1) + '_' + (col-1)))
-          options.push($('#' + (row+1) + '_' + (col+1)))
+          option = $('#' + (row+1) + '_' + (col-1))
+          // if option is a parent
+          if(option.is(":parent")){
+            // if options child (piece) is the same colour
+            // as the options --> for jumping over pieces
+              // we can present the option 
+              // options.push($('#' + (row+1) + '_' + (col-1)))
+              // options.push($('#' + (row+1) + '_' + (col+1)))
+              //options.push(option)
+
+          }
+          // otherwise (if it isnt a parent)
+          else{
+            options.push(option)
+          }
+            
+
+          option = $('#' + (row+1) + '_' + (col+1))
+          // if option is a parent
+          if(option.is(":parent")){
+            // if options child (piece) is the same colour
+            // as the options --> for jumping over pieces
+              // we can present the option 
+              //options.push(option)
+
+          }
+          // otherwise (if it isnt a parent)
+          else{
+            options.push(option)
+          }
         }
         // otherwise if the color of the piece is black
         else if (color == "rgb(46, 23, 58)"){
-          // we can present options moving up the grid
-          options.push($('#' + (row-1) + '_' + (col-1)))
-          options.push($('#' + (row-1) + '_' + (col+1)))
+          option = $('#' + (row-1) + '_' + (col-1))
+          // if option is a parent
+          if(option.is(":parent")){
+            // if options child (piece) is the same colour
+            // as the options --> for jumping over pieces
+              // we can present the option 
+              //options.push(option)
+
+          }
+          // otherwise (if it isnt a parent)
+          else{
+            options.push(option)
+          }
+            
+
+          option = $('#' + (row-1) + '_' + (col+1))
+          // if option is a parent
+          if(option.is(":parent")){
+            // if options child (piece) is the same colour
+            // as the options --> for jumping over pieces
+              // we can present the option 
+              //options.push(option)
+
+          }
+          // otherwise (if it isnt a parent)
+          else{
+            options.push(option)
+          }
         }
+
         console.log(options)
         for (i=0;i<options.length;i++){
           options[i].css("background-color", "yellow");
